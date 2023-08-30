@@ -1,8 +1,8 @@
 const apikey = "a04ea3149546b5193f788de5e9ea2493";
 
-const weatherDataEl = document.getElementById("weatherData"); // Corrected the selector syntax
+const weatherDataEl = document.getElementById("weatherData");
 
-const cityInputEl = document.getElementById("cityInput"); // Corrected the selector syntax
+const cityInputEl = document.getElementById("cityInput");
 
 const formEl = document.querySelector("form");
 
@@ -30,7 +30,7 @@ async function getWeatherData(cityName) {
     const icon = data.weather[0].icon;
 
     const details = [
-      `Feels like: ${Math.round(data.main.feels_like)}`,
+      `Feels like: ${Math.round(data.main.feels_like)}°C`,
       `Humidity: ${data.main.humidity}%`,
       `Wind Speed: ${data.wind.speed} m/s`,
     ];
@@ -41,6 +41,8 @@ async function getWeatherData(cityName) {
     weatherDataEl.querySelector(
       ".temperature"
     ).textContent = `${temperature}°C`;
+    weatherDataEl.querySelector(".description").textContent = description;
+
     weatherDataEl.querySelector(".description").innerHTML = details
       .map((detail) => `<div>${detail}</div>`)
       .join("");

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="main-container">
       <h1>WeatherCast</h1>
       <form>
         <div class="input-container">
@@ -20,7 +20,9 @@
             />
           </div>
         </div>
-        <button class="button" type="submit">Get Weather</button>
+        <button id="weatherBtn" class="button" type="submit">
+          Get Weather
+        </button>
       </form>
 
       <div id="weatherData">
@@ -30,6 +32,11 @@
         <div class="details"></div>
       </div>
     </div>
+    <img
+      class="background-image"
+      src="gorgeous-clouds-background-with-blue-sky-design_1017-25501.avif"
+      alt="an image"
+    />
     <script src="app.js"></script>
   </body>
 </html>
