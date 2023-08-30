@@ -9,7 +9,7 @@ h1 {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #e7f0ff;
   padding: 20px;
   border-radius: 50px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -180,4 +180,40 @@ form input[type="text"] {
     rgb(239, 247, 255) 0%,
     rgb(214, 229, 247) 100%
   );
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.details > div {
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  flex: 1;
+  border-radius: 50px;
+  text-align: center;
+  min-height: 45px;
 }
