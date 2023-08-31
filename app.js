@@ -54,6 +54,11 @@ async function getWeatherData(cityValue) {
     cityInputEl.value = "";
   } catch (error) {
     if (cityValue === "") {
+      weatherDataEl.querySelector(".city").textContent = "";
+      weatherDataEl.querySelector(".icon").innerHTML = "";
+      weatherDataEl.querySelector(".temperature").textContent = "";
+      weatherDataEl.querySelector(".details").innerHTML = "";
+      cityInputEl.value = "";
       weatherDataEl.querySelector(".description").textContent =
         "Please enter a city name";
     } else {
@@ -64,6 +69,7 @@ async function getWeatherData(cityValue) {
         "An error occurred, please try again later";
 
       weatherDataEl.querySelector(".details").innerHTML = "";
+      cityInputEl.value = "";
     }
   }
 }
