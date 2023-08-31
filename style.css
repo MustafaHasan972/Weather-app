@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 85vh;
   margin: 0;
   background-color: #e7f0ff;
   font-family: "Montserrat", sans-serif;
@@ -13,11 +13,6 @@ h1 {
 }
 
 .container {
-  background: linear-gradient(
-    0deg,
-    rgb(163, 206, 255) 0%,
-    rgb(211, 232, 255) 100%
-  );
   background: transparent;
   backdrop-filter: blur(30px);
   padding: 20px;
@@ -27,7 +22,6 @@ h1 {
   text-align: center;
   max-width: 600px;
   width: 30%;
-  transition: height 1s linear;
 }
 
 form {
@@ -45,10 +39,70 @@ form input[type="text"] {
   width: 96%;
 }
 
+.icon img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  image-rendering: crisp-edges;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.details > div {
+  padding: 20px;
+  background-color: #fcfcfc;
+  color: rgba(3, 42, 80, 0.702);
+  backdrop-filter: blur(30px);
+  margin: 10px;
+  flex: 1;
+  border-radius: 50px;
+  text-align: center;
+  min-height: 45px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  border: 5px solid rgba(79, 156, 232, 0.7019607843);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.city {
+  font-weight: bold;
+  color: #2b3e5f;
+  font-size: 42px;
+}
+
 .button {
   display: inline-block;
   padding: 12px 24px;
-  border: 1px solid rgba(79, 156, 232, 0.7019607843);
+  border: 0px solid rgba(79, 156, 232, 0.7019607843);
   border-radius: 50px;
   transition: all 0.2s ease-in;
   position: relative;
@@ -91,7 +145,7 @@ form input[type="text"] {
 
 .button:hover {
   color: #ffffff;
-  border: 1px solid rgba(79, 156, 232, 0.7019607843);
+  border: 0px solid rgba(79, 156, 232, 0.7019607843);
 }
 
 .button:hover:before {
@@ -191,51 +245,4 @@ form input[type="text"] {
     rgb(239, 247, 255) 0%,
     rgb(214, 229, 247) 100%
   );
-}
-
-.icon img {
-  width: 100px;
-  height: 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  image-rendering: crisp-edges;
-}
-
-.temperature {
-  font-size: 48px;
-  font-weight: bold;
-  margin: 20px 0;
-}
-
-.description {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.details > div {
-  padding: 20px;
-  background-color: #f1f1f1;
-  margin: 10px;
-  flex: 1;
-  border-radius: 50px;
-  text-align: center;
-  min-height: 45px;
-}
-
-.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
 }
