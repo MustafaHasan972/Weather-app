@@ -23,7 +23,6 @@ async function getWeatherData(cityName) {
     }
 
     const data = await response.json();
-    console.log(data);
 
     const temperature = Math.round(data.main.temp);
     const description = data.weather[0].description;
@@ -42,11 +41,11 @@ async function getWeatherData(cityName) {
       ".temperature"
     ).textContent = `${temperature}°C`;
     weatherDataEl.querySelector(".description").textContent = description;
-
     weatherDataEl.querySelector(".description").innerHTML = details
       .map((detail) => `<div>${detail}</div>`)
       .join("");
   } catch (error) {
+    console.log(error);
     weatherDataEl.querySelector(".icon").innerHTML = "";
     weatherDataEl.querySelector(".temperature").textContent = "";
     weatherDataEl.querySelector(".description").textContent =
