@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
+  min-height: 100vh;
   margin: 0;
   background-color: #e7f0ff;
   font-family: "Montserrat", sans-serif;
