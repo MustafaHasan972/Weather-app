@@ -8,7 +8,7 @@ const formEl = document.querySelector("form");
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
-  const cityValue = cityInputEl.value;
+  const cityValue = cityInputEl.value.trim();
   getWeatherData(cityValue);
 });
 
@@ -53,14 +53,15 @@ async function getWeatherData(cityValue) {
 
     cityInputEl.value = "";
   } catch (error) {
-    if (cityInputEl.value === undefined) {
+    if (cityValue === "") {
       weatherDataEl.querySelector(".description").textContent =
         "Please enter a city name";
     } else {
+      weatherDataEl.querySelector(".city").textContent = "";
       weatherDataEl.querySelector(".icon").innerHTML = "";
       weatherDataEl.querySelector(".temperature").textContent = "";
       weatherDataEl.querySelector(".description").textContent =
-        "An error happened, please try again later";
+        "An error occurred, please try again later";
 
       weatherDataEl.querySelector(".details").innerHTML = "";
     }
