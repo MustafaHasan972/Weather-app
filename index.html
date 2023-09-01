@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Main container for the Weather App -->
     <div class="container" id="main-container">
       <h1>WeatherCast</h1>
       <form>
         <div class="input-container">
           <div class="search-container">
+            <!-- Input field for entering the city name -->
             <input
               class="input"
               type="text"
@@ -21,22 +24,31 @@
             />
           </div>
         </div>
+        <!-- Button for submitting the city name to get weather data -->
         <button id="weatherBtn" class="button" type="submit">
           Get Weather
         </button>
       </form>
 
+      <!-- Container for displaying weather data -->
       <div id="weather-data">
+        <!-- Display the city name -->
         <div class="city"></div>
+        <!-- Display weather icon -->
         <div class="icon"></div>
+        <!-- Display temperature -->
         <div class="temperature"></div>
+        <!-- Container for weather description -->
         <div id="description-box" class="description detail-box"></div>
+        <!-- Container for additional weather details -->
         <div class="details">
-          <!-- Details -->
+          <!-- Details will be populated dynamically by JavaScript -->
         </div>
       </div>
     </div>
+    <!-- Background image for the Weather App -->
     <img class="background-image" src="hero-image.png" alt="weather image" />
+    <!-- Include JavaScript file for app functionality -->
     <script src="app.js"></script>
   </body>
 </html>
